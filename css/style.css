@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+
+   width: 70%;
+   margin: 100px auto;
+   
+}
+
+header{
+background-color: #0f1742;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+font-size: 20px;
+
+}
+header h2 {
+    flex: 1;
+}
+header .c-tasks-count,
+header .c-tasks-done {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
+
+}
+header .c-tasks-count{
+    background-color: white;
+    color: #0688cf;
+    margin-right: 20px;
+    
+}
+header .c-tasks-done{
+    background-color: #0688cf;
+    color: white;
+
+}
+h1 {
+    margin-bottom: 20px;
+    color: #0f1742;
+    font-size: 40px;
+    font-weight: bold;
+
+}
+form {
+    width: 80%;
+    margin: auto;
+}
+
+
+ input,button,#clear-button{
+
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    outline: none;
+    border-radius: 8px;
+
+ }
+
+form input {
+   border: 1px solid #ccc;
+
+    width: calc(80% - 10%);
+    border-radius: 20px;
+    
+   
+}
+.null-value{
+    text-align: center;
+    color: white;
+    background-color: rgb(222, 14, 14);
+    font-weight: bold;
+    border-radius: 20px; 
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 10px;
+    transition: .4s ease-in-out;
+   
+}
+form button {
+    background-color: rgb(41, 111, 190);
+    width: 10%;
+    margin: 0 20px 0;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+#clear-button {
+    background-color: rgb(151, 24, 27);
+    width: 10%;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+
+.tasks-empty{
+    text-align: center;
+    color: #0688cf;
+    margin: 20px 0;
+
+}
+.list{
+    list-style: none;
+    border: 1px solid #ccc;
+    /* border-radius:20px; */
+}
+
+
+
+.list .list-item .task {
+
+   
+    width: calc(100% - 6%);
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+
+}
+.list .list-item .del {
+ 
+ display: inline-block;
+ width: 5%;
+ text-align: center;
+ cursor: pointer;
+ color: #9c2626;
+ font-size: 22px;
+
+
+}
+
+.list .list-item:not(:last-child){
+    border-bottom: 1px solid #ccc;
+}
+
+.done {
+    text-decoration: line-through;
+    color: #0688cf;
+}
+
+
+ .list .list-item {
+    transition: .5s;
+ }
+ .list .list-item:hover {
+    background-color: rgb(85, 67, 151);
+    color: white;
+ }
+ .list .list-item:hover .del {
+    color: white;
+ }
+
+ /* .list .list-item .task {
+    transition: .5s;
+ }
+.list .list-item .task:hover {
+    background-color:#0f1742;
+    color: white;
+} */
+
+@media(max-width: 767px){
+
+    form {
+        
+        display: flex;
+        
+    }
+    form input {
+        border: 1px solid #ccc;
+        /* width: calc(80% - 10%); */
+        border-radius: 20px;
+    }
+    #clear-button {
+        background-color: rgb(151, 24, 27);
+        width: 18%;
+        color: white;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    form button {
+        background-color: rgb(41, 111, 190);
+        width: 19%;
+        margin: 0 20px 0;
+        color: white;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    form input::placeholder {
+        opacity: 1;
+        font-size: 15px;
+    }
+    .list .list-item .task {
+        /* width: calc(100% - 6%); */
+        display: inline-block;
+        padding: 20px;
+        cursor: pointer;
+        width: 375px;
+    }
+
+}
